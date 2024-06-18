@@ -9,6 +9,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+USERID=$(id -u)
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
@@ -18,8 +20,6 @@ VALIDATE(){
         echo -e "$2....$G suceess $N"
     fi
 }
-
-USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
